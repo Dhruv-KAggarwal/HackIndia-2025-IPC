@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #F3EEE5 0%, #E8E0D5 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(243, 238, 229, 0.95) 100%);
+  box-shadow: 0 8px 32px rgba(39, 30, 28, 0.1),
+              0 0 20px rgba(255, 215, 0, 0.1);
+  border-radius: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  color: #271E1C;
+  width: 100%;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  text-shadow: 2px 2px 4px rgba(39, 30, 28, 0.1),
+               0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: block;
+  color: #271E1C;
+  width: 100%;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
+}
+
+label:hover {
+  color: #3A2A26;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #271E1C;
+  border-radius: 12px;
+  font-size: 1.5em;
+  resize: vertical;
+  background: linear-gradient(135deg, rgba(243, 238, 229, 0.9) 0%, rgba(232, 224, 213, 0.9) 100%);
+  box-sizing: border-box;
+  min-height: 120px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(39, 30, 28, 0.1),
+              0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #3A2A26;
+  box-shadow: 0 6px 12px rgba(39, 30, 28, 0.15),
+              0 0 20px rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #271E1C 0%, #3A2A26 100%);
+  border: none;
+  color: #F3EEE5;
+  font-size: 1.1em;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(39, 30, 28, 0.2),
+              0 0 15px rgba(255, 215, 0, 0.2);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(39, 30, 28, 0.3),
+              0 0 25px rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, #3A2A26 0%, #271E1C 100%);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+.response {
+  margin-top: 30px;
+  color: #271E1C;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.response h3 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  color: #271E1C;
+  text-shadow: 1px 1px 2px rgba(39, 30, 28, 0.1),
+               0 0 8px rgba(255, 215, 0, 0.2);
+}
+
+.response p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, rgba(243, 238, 229, 0.9) 0%, rgba(232, 224, 213, 0.9) 100%);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(39, 30, 28, 0.1),
+              0 0 15px rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.response p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(39, 30, 28, 0.15),
+              0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #271E1C;
+  font-size: 0.9em;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(243, 238, 229, 0.95) 100%);
+  margin-top: auto;
+  box-shadow: 0 -2px 4px rgba(39, 30, 28, 0.1),
+              0 0 15px rgba(255, 215, 0, 0.1);
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini + FAISS Question Answering</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ask a Question</h1>
+        <!-- Form that submits the question -->
+        <form action="/ask" method="POST" enctype="application/x-www-form-urlencoded">
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit">Ask</button>
+        </form>
+
+        <!-- Conditional rendering for answer and sources -->
+        {% if answer %}
+            <h2>Answer:</h2>
+            <p>{{ answer }}</p>
+            <h3>Sources:</h3>
+            <ul>
+                {% for source in sources %}
+                    <li>{{ source }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        
+        <!-- Error message handling -->
+        {% if error %}
+            <h2>Error:</h2>
+            <p>{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
